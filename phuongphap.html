@@ -1,0 +1,287 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+  <title>Giới thiệu học phần</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  :root {
+    --white: #fff;
+    --black: #000;
+    --primary: #00ccff;
+  }
+
+  .wide {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .background {
+    background: linear-gradient(to top,
+        rgba(255, 17, 0, 0.726),
+        rgba(0, 77, 105, 0.795)),
+      url("https://hoangkimngoc2001.github.io/hi/header-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header_container img {
+    max-width: 80px;
+    box-shadow: var(--white) 0px 0px 10px 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+
+  .header_nav {
+    line-height: 50px;
+  }
+
+  .header_nav ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 15px;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .header_nav li:hover {
+    background-color: var(--primary)
+  }
+
+  .header_nav li:hover a {
+    color: var(--black)
+  }
+
+  .header_nav li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 10px;
+  }
+
+  .header_nav li .sub {
+    position: absolute;
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none;
+    animation: identifier .7s ease;
+    transform-origin: top center;
+  }
+
+  @keyframes identifier {
+    from {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+
+  .header_nav li .sub:after {
+    content: '';
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+  }
+
+  .header_nav .sub li {
+    display: block;
+    padding: 0 15px;
+  }
+
+  .header_nav ul li:hover .sub {
+    display: block;
+  }
+
+  .header_nav li i {
+    padding-right: 5px;
+  }
+
+  .slider {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider_container {
+    text-align: center;
+  }
+
+  .slider_container h1,
+  .slider_container h2 {
+    padding: 10px 0;
+    color: var(--white);
+  }
+
+  .slider_container h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+
+  .slider_container h2 {
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+
+  .top_title {
+    text-align: center;
+    margin: 20px 0 70px 0;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-shadow: rgb(255, 0, 76) 0px 5px 15px;
+    color: rgb(252, 255, 104);
+  }
+
+  .container {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container .about {
+    line-height: 1.5;
+    padding: 0 5px;
+    border: 2px solid var(--white);
+    padding: 15px;
+    box-shadow: #fff 0px 0px 20px 5px;
+    border-radius: 15px;
+    white-space: nowrap;
+  }
+
+  .container .about:first-child {
+    margin-right: 15px;
+  }
+
+  .about .title {
+    margin-bottom: 15px;
+  }
+
+  .about .text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about .text span {
+    text-decoration: underline;
+  }
+</style>
+
+<body>
+  <div class="background">
+    <div class="wide">
+      <header>
+        <div class="header_container">
+          <div class="header_logo">
+            <a href="https://www.ctu.edu.vn/"><img src="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png" alt="Logo Đại học Cần Thơ"></a>
+          </div>
+          <nav class="header_nav">
+            <ul>
+              <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+              <li><a href="muctieu.html"><i class="fas fa-bullseye-pointer"></i>Mục tiêu</a></li>
+              <li><a href="daura.html"><i class="far fa-check-circle"></i>Chuẩn đầu ra</a></li>
+              <li><a href="phuongphap.html"><i class="far fa-edit"></i>Phương pháp & nhiệm vụ</a></li>
+              <li><a href="danhgiahp.html"><i class="fas fa-medal"></i>Đánh giá</a></li>
+              <li>
+                <a href=""><i class="far fa-book-open"></i>
+                  Bài tập
+              </a>
+              <ul class="sub">
+                  <li><a href="https://hoangkimngoc2001.github.io/KC326/cac-vi-du"> HTML</a></li>
+                  <li><a href="https://hoangkimngoc2001.github.io/KC326/ViduCSS"> CSS</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href=""><i class="far fa-info-circle"></i>
+                  Thông tin thêm
+              </a>
+              <ul class="sub">
+                  <li><a href="https://www.ctu.edu.vn/">CTU</a></li>
+                  <li><a href="https://elearning.ctu.edu.vn/">Elearning</a></li>
+                  <li><a href="https://htql.ctu.edu.vn/">HTQL</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="slider">
+        <div class="slider_container">
+          <h1>Đại học Cần Thơ</h1>
+          <h2>Học phần KC326</h2>
+        </div>
+      </div>
+      <h3 class="top_title">Phương pháp & Nhiệm vụ</h3>
+    </div>
+    <section class="wide container">
+      <div class="about">
+        <div class="title">
+          <h3>1. Phương pháp giảng dạy</h3>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h4>- Diễn giảng</span>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="title">
+          <h3>2. Nhiệm vụ của sinh viên</h3>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h4>Sinh viên phải thực hiện tốt các nhiệm vụ sau:</h4>
+          </div>
+          <div class="text">
+            <h4>- Tham dự <span>tối thiểu 80%</span> số tiết học lý thuyết.</h4>
+          </div>
+          <div class="text">
+            <h4>- Thực hiện <span>đầy đủ</span> các bài tập nhóm/bài tập và được đánh giá kết quả thực hiện.</h4>
+          </div>
+          <div class="text">
+            <h4>- Tham dự báo cáo thiết kế giữa kỳ về hệ thống ứng dụng điều khiển, giám sát qua Internet sử dụng kiến
+              thức đã học.</h4>
+          </div>
+          <div class="text">
+            <h4>- Chủ động tổ chức thực hiện giờ tự học.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

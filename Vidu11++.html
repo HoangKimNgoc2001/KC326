@@ -1,0 +1,81 @@
+<html>
+    <link rel="shortcut icon" href="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png">
+    <title>
+        Ví dụ 11
+    </title>
+    <head>
+        <script type="text/javascript">
+            function disp_alert()
+                {
+                    alert ("Hello again! Đây là cách tôi" + '\n' + "thêm và ngắt dòng vào" + '\n' + "hộp cảnh báo!")
+                }
+            function disp_confirm ()
+                {
+                    var name=confirm("Press a button")
+                if (name==true)
+                    {
+                        document.write("Bạn đã nhấn nút OK!")
+                    }
+                else
+                    {
+                        document.write("Bạn đã nhấn nút Cancel!")
+                    }
+                }
+            function disp_prompt()
+                {
+                    var name=prompt("please enter your name","")
+                    if (name!=null && name!="")
+                    {
+                        document.write("Hello" + name + "! How are you today?")
+                    }
+                }
+            function myfunction()
+                {
+                    alert ("Have a nice day!")
+                }
+            function myfunctional(txt)
+                {
+                    alert (txt)
+                }
+        </script>
+    </head>
+    <body>
+        <h1 align=center>Popup</h1>
+        <form>
+            <input type="button"
+            onclick="disp_alert()"value="Display alert box">
+        </form>
+        <br>
+        <form>
+            <input type="button"
+            onclick="disp_confirm()"value="Display a confirm box">
+        </form>
+        <br>
+        <form>
+            <input type="button"
+            onclick="disp_prompt()"value="Display a Prompt box">
+        </form>
+        <br>
+        <form>
+            <input type="button"
+            onclick="myfunction()"value="Call function">
+        </form>
+        <p>
+            By pressing the button, a function will be called. The function will alert a message.
+        </p>
+        <br>
+        <form>
+            <input type="button"
+            onclick="myfunctional('Good morning!')"value="In The Morning">
+            <input type="button"
+            onclick="myfunctional('Delicious lunch!')"value="In The Noon">
+            <input type="button"
+            onclick="myfunctional('Slepp well!')"value="In The Evening">
+        </form>
+        <p>
+            When you click on one of the buttons, a function will be called. The function will alert the argument that is passed to it.
+        </p>
+        <br><a href=javascript.html target="_top"><p align="center">Trở về các ví dụ Javascript</p>
+        </a>
+    </body>
+</html>

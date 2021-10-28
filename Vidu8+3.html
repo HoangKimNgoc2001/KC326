@@ -1,0 +1,41 @@
+<html>
+   <link rel="shortcut icon" href="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png">
+    <title>Ví dụ 14</title>
+   <head><style>
+body{font-family:arial;}
+a{color: black;text-decoration:none;font:bold}
+a:hover{color: #606060}
+td.menu{background: lightblue}
+table.nav{
+	background: black;
+	position: relative;
+	font: bold 80% arial;
+	top: 0px;
+	left: -135px;
+}
+</style>
+<script type="text/javascript">
+var i=-135;
+var intHide;
+var intShow;
+var speed=3;
+function showmenu() { clearInterval(intHide); intShow=setInterval("show()",10);}
+function hidemenu(){clearInterval(intShow); intHide=setInterval("hide()",100);}
+function show(){if (i<-12) {i=i+speed; document.getElementById('myMenu').style.left=i;}}
+function hide(){if (i>-135) {i=i-speed; document.getElementById('myMenu').style.left=i;}}
+</script></head>
+<body>
+<table id="myMenu" class="nav" width="150" onmouseover="showmenu()" onmouseout="hidemenu()">
+	<tr><td class="menu"><a href="/default.asp">HOME</a></td>
+		<td rowspan="5" align="center"
+		bgcolor="#FF8080">M<br>E<br>N<br>U</td></tr>
+		<tr><td class="menu"><a href="/asp/default.asp">ASP</a></td></tr>
+		<tr><td class="menu"><a href="/js/default.asp">JavaScript</a></td></tr>
+		<tr><td class="menu"><a href="default.asp">HTML</a></td></tr>
+		<tr><td class="menu"><a href="/vbscript/default.asp">VBScript</a></td></tr>
+	</table>
+	<p>Mouse over the MENU to show/hide the menu</p>
+	<p>Try changing the "speed" varible in the script, to change the menus's sliding speed</p>
+   <br><a href=CSS.html target="_top"><p align="center">Trở về các ví dụ CSS</p>
+   </a>
+</body></html>

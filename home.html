@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+  <title>Giới thiệu học phần</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  :root {
+    --white: #fff;
+    --black: #000;
+    --primary: #00ccff;
+  }
+
+  .wide {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .background {
+    background: linear-gradient(to top,
+        rgba(255, 17, 0, 0.726),
+        rgba(0, 77, 105, 0.795)),
+      url("https://hoangkimngoc2001.github.io/hi/header-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header_container img {
+    max-width: 80px;
+    box-shadow: var(--white) 0px 0px 10px 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+
+  .header_nav {
+    line-height: 50px;
+  }
+
+  .header_nav ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 15px;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .header_nav li:hover {
+    background-color: var(--primary)
+  }
+
+  .header_nav li:hover a {
+    color: var(--black)
+  }
+
+  .header_nav li .sub {
+    position: absolute;
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none;
+    animation: identifier .7s ease;
+    transform-origin: top center;
+  }
+
+  @keyframes identifier {
+    from {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+
+  .header_nav li .sub:after {
+    content: '';
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+  }
+
+  .header_nav .sub li {
+    display: block;
+    padding: 0 15px;
+  }
+
+  .header_nav ul li:hover .sub {
+    display: block;
+  }
+
+  .header_nav li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    padding: 15px 10px;
+  }
+
+  .header_nav li i {
+    padding-right: 5px;
+  }
+
+  .slider {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider_container {
+    text-align: center;
+  }
+
+  .slider_container h1,
+  .slider_container h2 {
+    padding: 10px 0;
+    color: var(--white);
+  }
+
+  .slider_container h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+
+  .slider_container h2 {
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+
+  .top_title {
+    text-align: center;
+    margin: 20px 0 45px 0;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-shadow: rgb(255, 0, 76) 0px 5px 15px;
+    color: rgb(252, 255, 104);
+  }
+
+  .container {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container .top_title {
+    text-align: center;
+    margin: 20px 0 35px 0;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-shadow: rgb(255, 0, 76) 0px 5px 15px;
+    color: rgb(252, 255, 104);
+  }
+
+  .container .about {
+    flex: 0 0 32.33333%;
+    width: 32.33333%;
+    line-height: 1.5;
+    padding: 0 5px;
+    border: 2px solid var(--white);
+    padding: 15px;
+    box-shadow: #fff 0px 0px 20px 5px;
+    border-radius: 15px;
+  }
+
+  .container .about:nth-child(2) {
+    padding-left: 4%;
+  }
+
+  .container .about:nth-child(3) {
+    text-align: justify;
+  }
+
+  .about .title {
+    margin-bottom: 15px;
+  }
+
+  .about .text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
+
+<body>
+  <div class="background">
+    <div class="wide">
+      <header>
+        <div class="header_container">
+          <div class="header_logo">
+            <a href="https://www.ctu.edu.vn/"><img src="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png" alt="Logo Đại học Cần Thơ"></a>
+          </div>
+          <nav class="header_nav">
+            <ul>
+              <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+              <li><a href="muctieu.html"><i class="fas fa-bullseye-pointer"></i>Mục tiêu</a></li>
+              <li><a href="daura.html"><i class="far fa-check-circle"></i>Chuẩn đầu ra</a></li>
+              <li><a href="phuongphap.html"><i class="far fa-edit"></i>Phương pháp & nhiệm vụ</a></li>
+              <li><a href="danhgiahp.html"><i class="fas fa-medal"></i>Đánh giá</a></li>
+              <li>
+                <a href=""><i class="far fa-book-open"></i>
+                  Bài tập
+              </a>
+              <ul class="sub">
+                  <li><a href="https://hoangkimngoc2001.github.io/KC326/cac-vi-du"> HTML</a></li>
+                  <li><a href="https://hoangkimngoc2001.github.io/KC326/ViduCSS"> CSS</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href=""><i class="far fa-info-circle"></i>
+                  Thông tin thêm
+              </a>
+              <ul class="sub">
+                  <li><a href="https://www.ctu.edu.vn/">CTU</a></li>
+                  <li><a href="https://elearning.ctu.edu.vn/">Elearning</a></li>
+                  <li><a href="https://htql.ctu.edu.vn/">HTQL</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="slider">
+        <div class="slider_container">
+          <h1>Đại học Cần Thơ</h1>
+          <h2>Học phần KC326</h2>
+        </div>
+      </div>
+      <h3 class="top_title">Giới thiệu</h3>
+    </div>
+    <section class="wide container">
+      <div class="about">
+        <div class="title">
+          <h3>1. Tên học phần: Kỹ thuật IoTs và ứng ứng dụng (IoT Technologies and applications)</h3>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h4>- Mã số học phần:&nbsp;</h4> <span>KC326</span>
+          </div>
+          <div class="text">
+            <h4>- Số tín chỉ học phần:&nbsp;</h4> <span><b>02 </b>Tín chỉ</span>
+          </div>
+          <div class="text">
+            <h4>- Số tiết học phần: </h4> <span> <b>&nbsp; 30 </b>Tiết lý thuyết và <b>30</b> Tiết tự học</span>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="title">
+          <h3>2. Đơn vị phụ trách</h3>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h4>- Bộ môn:</h4> <span>Tự động hóa</span>
+          </div>
+          <div class="text">
+            <h4>- Khoa/viện/Trung tâm/Bộ môn:</h4> <span>Khoa công nghệ</span>
+          </div>
+          <div class="text">
+            <h4>- Giảng viên:</h4> <span>TS. Nguyễn Văn Khanh</span>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="title">
+          <h3>3. Mô tả tóm tắt nội dung học phần</h3>
+        </div>
+        <div class="content">
+          <p>IoT là công nghệ ứng dụng Internet để kết nối các thiết bị phần cứng theo nguyên lý không dây và
+            tốc
+            độ cao.
+            Học phần này được xây dựng giúp sinh viên ngành Tự Động Hóa và Cơ Điện Tử trải nghiệm nguyên lý,
+            thiết kế, kết nối, lập trình,
+            thu thập dữ liệu thông qua giao diện web được lạp trình theo khả năng của từng sinh viên qua các
+            ứng
+            dựng cơ bản được giới thiệu và hướng dẫn trên lớp của giáo viên.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

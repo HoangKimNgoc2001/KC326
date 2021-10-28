@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Giới thiệu học phần</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    :root {
+        --white: #fff;
+        --black: #000;
+        --primary: #00ccff;
+    }
+
+    .wide {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .background {
+        background: linear-gradient(to top,
+                rgba(255, 17, 0, 0.726),
+                rgba(0, 77, 105, 0.795)),
+            url("https://hoangkimngoc2001.github.io/hi/header-background.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+
+    header {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_container img {
+        max-width: 80px;
+        box-shadow: var(--white) 0px 0px 10px 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+    .header_nav {
+        line-height: 50px;
+    }
+
+    .header_nav ul li {
+        display: inline-block;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s ease;
+        font-size: 15px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .header_nav li:hover {
+        background-color: var(--primary)
+    }
+
+    .header_nav li:hover a {
+        color: var(--black)
+    }
+
+    .header_nav li a {
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        padding: 15px 10px;
+    }
+
+    .header_nav li .sub {
+        position: absolute;
+        background-color: var(--white);
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 5px;
+        display: none;
+        animation: identifier .7s ease;
+        transform-origin: top center;
+    }
+
+    @keyframes identifier {
+        from {
+            opacity: 0;
+            transform: rotateX(90deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    .header_nav li .sub:after {
+        content: '';
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+    }
+
+    .header_nav .sub li {
+        display: block;
+        padding: 0 15px;
+    }
+
+    .header_nav ul li:hover .sub {
+        display: block;
+    }
+
+    .header_nav li i {
+        padding-right: 5px;
+    }
+
+    .slider {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider_container {
+        text-align: center;
+    }
+
+    .slider_container h1,
+    .slider_container h2 {
+        padding: 10px 0;
+        color: var(--white);
+    }
+
+    .slider_container h1 {
+        text-transform: uppercase;
+        font-size: 60px;
+    }
+
+    .slider_container h2 {
+        font-size: 50px;
+        text-transform: capitalize;
+    }
+
+    .container {
+        color: var(--white);
+    }
+
+    .container h3 {
+        text-align: center;
+        margin: 20px 0 35px 0;
+        text-transform: uppercase;
+        font-size: 35px;
+        text-shadow: rgb(255, 0, 76) 0px 5px 15px;
+        color: rgb(252, 255, 104);
+    }
+
+    table {
+        min-width: 100%;
+        border-collapse: collapse;
+        box-shadow: var(--white) 0px 0px 15px 5px;
+    }
+
+    th,
+    td {
+        border: 2px solid var(--white);
+        padding: 10px 20px;
+    }
+
+    td:first-child,
+    td:last-child {
+        text-align: center;
+    }
+
+    td:last-child {
+        min-width: 150px;
+    }
+
+    tr:hover {
+        background-color: var(--primary);
+        color: var(--black);
+    }
+
+    th {
+        min-width: 120px;
+    }
+
+    .center {
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="wide">
+            <header>
+                <div class="header_container">
+                    <div class="header_logo">
+                        <a href="https://www.ctu.edu.vn/"><img src="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png" alt="Logo Đại học Cần Thơ"></a>
+                    </div>
+                    <nav class="header_nav">
+                        <ul>
+                            <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="muctieu.html"><i class="fas fa-bullseye-pointer"></i>Mục tiêu</a></li>
+                            <li><a href="daura.html"><i class="far fa-check-circle"></i>Chuẩn đầu ra</a></li>
+                            <li><a href="phuongphap.html"><i class="far fa-edit"></i>Phương pháp & nhiệm vụ</a></li>
+                            <li><a href="danhgiahp.html"><i class="fas fa-medal"></i>Đánh giá</a></li>
+                            <li>
+                                <a href=""><i class="far fa-book-open"></i>
+                                    Bài tập
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="https://hoangkimngoc2001.github.io/KC326/cac-vi-du"> HTML</a></li>
+                                    <li><a href="https://hoangkimngoc2001.github.io/KC326/ViduCSS"> CSS</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><i class="far fa-info-circle"></i>
+                                    Thông tin thêm
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="https://www.ctu.edu.vn/">CTU</a></li>
+                                    <li><a href="https://elearning.ctu.edu.vn/">Elearning</a></li>
+                                    <li><a href="https://htql.ctu.edu.vn/">HTQL</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="slider">
+                <div class="slider_container">
+                    <h1>Đại học Cần Thơ</h1>
+                    <h2>Học phần KC326</h2>
+                </div>
+            </div>
+        </div>
+        <section class="wide container">
+            <h3>Chuẩn đầu ra</h3>
+            <table>
+                <thead>
+                    <th>CĐR <br> HP</th>
+                    <th>Nội dung chuẩn đầu ra</th>
+                    <th>Mục tiêu</th>
+                    <th>CĐR <br> CTĐT</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p class="center">Kiến thức</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C01</td>
+                        <td>
+                            <p>Hiểu được các nguyên lý kỹ thuật về điện - điện tử, điều khiển tự động và lập trình để
+                                thực hiện các ứng dụng IoT trong lĩnh vực cơ điện tử.</p>
+                        </td>
+                        <td>4.1</td>
+                        <td>2.1.1b</td>
+                    </tr>
+                    <tr>
+                        <td>C02</td>
+                        <td>
+                            <p>Trình bày được đặc tính của một hệ thống cơ điện tử hoặc một bộ phận của hệ thống cơ điện
+                                tử cơ bản có ứng dụng công nghệ IoT.</p>
+                        </td>
+                        <td>4.2</td>
+                        <td>2.1.3a</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p class="center">Kỹ năng</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C03</td>
+                        <td>
+                            <p>Thực hiện được mạch điện tử, kỹ thuật lập trình cơ bản đã được phát triển trong công nghệ
+                                IoT với một số hiệu chỉnh nhỏ để phù hợp với hệ thống đang thiết kế.</p>
+                        </td>
+                        <td>4.2</td>
+                        <td>2.1.2a</td>
+                    </tr>
+                    <tr>
+                        <td>C04</td>
+                        <td>
+                            <p>Thực hiện được một hệ thống cơ điện tử có ứng dụng công nghệ IoT cơ bản(mạch điện, chương
+                                trình, mô hình(nếu có) và tiến hành thí nghiệm, phân tích đánh giá số liệu) đáp ứng được
+                                yêu cầu thực tế có quan tâm đến các tác động của các giải pháp IoT trong cơ điện tử đố
+                                với một trong hai lĩnh vực sản xuất nông nghiệp và thủy sản.</p>
+                        </td>
+                        <td>4.2</td>
+                        <td>2.1.3a; <br> 2.2.1a; 2.2.1b</td>
+                    </tr>
+                    <tr>
+                        <td>C05</td>
+                        <td>
+                            <p>Hoạt động và giao tiếp hiệu quả trong nhóm chuyên nghành để đạt được mục tiêu của nhóm.
+                            </p>
+                        </td>
+                        <td>4.4</td>
+                        <td>2.2.2a; <br> 2.2.2b</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p class="center">Thái độ/Mức độ tự chủ và trách nhiệm</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C06</td>
+                        <td>
+                            <p>Nhận ra được trách nhiệm về đạo đức, nghề nghiệp trong các giải pháp kỹ thuật cơ điện tử;
+                                đánh giá cách giải pháp có xem xét tác động của nó đến môi trường và xã hội.</p>
+                        </td>
+                        <td>4.3</td>
+                        <td>2.3a</td>
+                    </tr>
+                    <tr>
+                        <td>C07</td>
+                        <td>
+                            <p>Thể hiện thái độ tự học và áp dụng kiến thức mới khi cần thiết.</p>
+                        </td>
+                        <td>4.4</td>
+                        <td>2.3b</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

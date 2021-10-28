@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Giới thiệu học phần</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    :root {
+        --white: #fff;
+        --black: #000;
+        --primary: #00ccff;
+    }
+
+    .wide {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .background {
+        background: linear-gradient(to top,
+                rgba(255, 17, 0, 0.726),
+                rgba(0, 77, 105, 0.795)),
+            url("https://hoangkimngoc2001.github.io/hi/header-background.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+
+    header {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_container img {
+        max-width: 80px;
+        box-shadow: var(--white) 0px 0px 10px 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+
+    .header_nav {
+        line-height: 50px;
+    }
+
+    .header_nav ul li {
+        display: inline-block;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s ease;
+        font-size: 15px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .header_nav li:hover {
+        background-color: var(--primary)
+    }
+
+    .header_nav li:hover a {
+        color: var(--black)
+    }
+
+    .header_nav li a {
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        padding: 15px 10px;
+    }
+
+    .header_nav li .sub {
+        position: absolute;
+        background-color: var(--white);
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 5px;
+        display: none;
+        animation: identifier .7s ease;
+        transform-origin: top center;
+    }
+
+    @keyframes identifier {
+        from {
+            opacity: 0;
+            transform: rotateX(90deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+        }
+    }
+
+    .header_nav li .sub:after {
+        content: '';
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+    }
+
+    .header_nav .sub li {
+        display: block;
+        padding: 0 15px;
+    }
+
+    .header_nav ul li:hover .sub {
+        display: block;
+    }
+
+    .header_nav li i {
+        padding-right: 5px;
+    }
+
+    .slider {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider_container {
+        text-align: center;
+    }
+
+    .slider_container h1,
+    .slider_container h2 {
+        padding: 10px 0;
+        color: var(--white);
+    }
+
+    .slider_container h1 {
+        text-transform: uppercase;
+        font-size: 60px;
+    }
+
+    .slider_container h2 {
+        font-size: 50px;
+        text-transform: capitalize;
+    }
+
+    .container {
+        color: var(--white);
+    }
+
+    .container .top_title {
+        text-align: center;
+        margin: 20px 0 35px 0;
+        text-transform: uppercase;
+        font-size: 35px;
+        text-shadow: rgb(255, 0, 76) 0px 5px 15px;
+        color: rgb(252, 255, 104);
+    }
+
+    .container .text h4 {
+        margin: 15px;
+    }
+
+    .title h3 {
+        margin: 25px 0;
+    }
+
+    table {
+        min-width: 100%;
+        border-collapse: collapse;
+        box-shadow: var(--white) 0px 0px 15px 5px;
+    }
+
+    th,
+    td {
+        border: 2px solid var(--white);
+        padding: 10px 20px;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    tr:hover {
+        background-color: var(--primary);
+        color: var(--black);
+    }
+
+    th {
+        min-width: 120px;
+    }
+
+    .text h4 {
+        font-weight: 300;
+    }
+
+    .note {
+        margin: 25px 0;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="wide">
+            <header>
+                <div class="header_container">
+                    <div class="header_logo">
+                        <a href="https://www.ctu.edu.vn/"><img src="https://yu.ctu.edu.vn/images/upload/article/2020/03/0305-logo-ctu.png" alt="Logo Đại học Cần Thơ"></a>
+                    </div>
+                    <nav class="header_nav">
+                        <ul>
+                            <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="muctieu.html"><i class="fas fa-bullseye-pointer"></i>Mục tiêu</a></li>
+                            <li><a href="daura.html"><i class="far fa-check-circle"></i>Chuẩn đầu ra</a></li>
+                            <li><a href="phuongphap.html"><i class="far fa-edit"></i>Phương pháp & nhiệm vụ</a></li>
+                            <li><a href="danhgiahp.html"><i class="fas fa-medal"></i>Đánh giá</a></li>
+                            <li>
+                                <a href=""><i class="far fa-book-open"></i>
+                                    Bài tập
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="https://hoangkimngoc2001.github.io/KC326/cac-vi-du"> HTML</a></li>
+                                    <li><a href="https://hoangkimngoc2001.github.io/KC326/ViduCSS"> CSS</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><i class="far fa-info-circle"></i>
+                                    Thông tin thêm
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="https://www.ctu.edu.vn/">CTU</a></li>
+                                    <li><a href="https://elearning.ctu.edu.vn/">Elearning</a></li>
+                                    <li><a href="https://htql.ctu.edu.vn/">HTQL</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="slider">
+                <div class="slider_container">
+                    <h1>Đại học Cần Thơ</h1>
+                    <h2>Học phần KC326</h2>
+                </div>
+            </div>
+        </div>
+        <section class="wide container">
+            <h3 class="top_title">Cách đánh giá kết quả học tập của sinh viên</h3>
+            <div class="table">
+                <div class="title">
+                    <h3>1. Cách đánh giá</h3>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h4>Sinh viên được đánh giá tích lũy học phần như sau:</h4>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <th>TT</th>
+                        <th>Điểm thành phần</th>
+                        <th>Quy định</th>
+                        <th>Trọng số</th>
+                        <th>Mục tiêu</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Điểm bài tập thiết kế mô hình</td>
+                            <td>Báo cáo mô hình cuối kỳ</td>
+                            <td>30%</td>
+                            <td>CO2-CO7</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Điểm giữa kỳ</td>
+                            <td>Báo cáo bằng thực hiện video clip về mô hình và poster đã thực hiện</td>
+                            <td>20%</td>
+                            <td>CO2-CO7</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Điểm thi kết thúc học phần</td>
+                            <td>Thi kiến thức lý thuyết gồm trắc nghiệm và bài tập</td>
+                            <td>50%</td>
+                            <td>CO1 đến CO4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <div class="title">
+                    <h3>2. Cách tính điểm</h3>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h4>- Điểm học phần là tổng điểm của tất cả các điểm đánh giá thành phần của học phần nhân với
+                            trọng số tương ứng. Điểm học phần theo thang điểm 10 làm tròn đến một chữ số thập phân, sau
+                            đó được đổi sang thang điểm 4 theo quy định về công tác học vụ của trường.</h4>
+                    </div>
+                    <div class="text">
+                        <h4>- Điểm bài tập và đồ án được chấm theo thang điểm 10( từ 0 đến 10), làm tròn đến một chữ số
+                            thập phân.</h4>
+                    </div>
+                    <div class="rate">
+                        <h4 class="note">*Cách quy đổi điểm thang điểm 10, thang điểm chữ và thang điểm 4 được thực hiện
+                            theo bảng
+                            sau đây:</h4>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <th>Điểm số theo thang điểm 10</th>
+                        <th>Điểm chữ</th>
+                        <th>Điểm số theo thang điểm 4</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9,0 - 10,0</td>
+                            <td>A</td>
+                            <td>4,0</td>
+                        </tr>
+                        <tr>
+                            <td>8,0 - 8,9</td>
+                            <td>B+</td>
+                            <td>3,5</ts>
+                        </tr>
+                        <tr>
+                            <td>7,0 - 7,9</td>
+                            <td>B</td>
+                            <td>3,0</td>
+                        </tr>
+                        <tr>
+                            <td>6,5 - 6,9</td>
+                            <td>C+</td>
+                            <td>2,5</td>
+                        </tr>
+                        <tr>
+                            <td>5,5 - 6,4</td>
+                            <td>C</td>
+                            <td>2,0</td>
+                        </tr>
+                        <tr>
+                            <td>5,0 - 5,4</td>
+                            <td>D+</td>
+                            <td>1,5</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>D</td>
+                            <td>1,0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
